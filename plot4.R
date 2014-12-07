@@ -55,7 +55,7 @@ printGlobalActivePower<-function(powerTable)
           merge=FALSE )
   
   ## Date/Time vs. Reactive power
-  plot(powerTable$dt,powerTable$Global_reactive_power,type="l",xlab="  ",ylab="Global_reactive_power")
+  plot(powerTable$dt,powerTable$Global_reactive_power,type="l",xlab="datetime",ylab="Global_reactive_power")
   
   dev.off() ## Close png device
 }
