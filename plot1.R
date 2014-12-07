@@ -32,6 +32,8 @@ readPowerThursdayAndFriday<-function()
 ## Plotting ____________________________________________________________________________
 printHistogram<-function(columnPower)
 {
+  png(file="plot1.png") ## Open png device with plot1 file in working directory
+  
   ## Histogram
   hist(x=columnPower,
        main="Global Active Power",
@@ -40,6 +42,8 @@ printHistogram<-function(columnPower)
        col=rgb(1,0,0,1),
        ylim=c(0,1200)
        ) ## Draw a new plot
+  
+  dev.off() ## Close png device
 }
 
 this_data<-readPowerThursdayAndFriday()
