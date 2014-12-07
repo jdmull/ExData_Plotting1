@@ -33,7 +33,7 @@ readPowerThursdayAndFriday<-function()
 printGlobalActivePower<-function(powerTable)
 {
   png(file="plot2.png") ## Open png device with plot2 file in working directory
-  plot(p2d$dt,p2d$Global_active_power,type="l",xlab="  ",ylab="Global Active Power (killowatts)")
+  plot(powerTable$dt,powerTable$Global_active_power,type="l",xlab="  ",ylab="Global Active Power (killowatts)")
   dev.off() ## Close png device
 }
 
